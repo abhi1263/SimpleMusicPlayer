@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context="studyjam.gdg.abhishek.simplemusicplayer.playActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/songName"
+        android:textSize="35sp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:textColor="@color/primary_text_default_material_dark"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:typeface="serif"
+        android:shadowColor="@color/background_material_dark"
+        android:shadowDx="2"
+        android:shadowRadius="3"
+        android:shadowDy="2"/>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/album_art_decription"
+        android:id="@+id/songImage"
+        android:src="@drawable/image"
+        android:layout_weight="8"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:textColor="@color/bright_foreground_material_dark"
+            android:id="@+id/currentTime"
+            android:paddingRight="10dp"
+            android:textSize="20sp"
+            android:text="@string/initial_time"/>
+
+        <SeekBar
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/timeSeekBar"
+            android:layout_gravity="center"
+            android:scrollbars="horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textSize="20sp"
+            android:id="@+id/totalTime"
+            android:paddingEnd="10dp"
+            android:textColor="@color/bright_foreground_inverse_material_light"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/previous_song_button_description"
+            android:onClick="previousSongPlay"
+            android:background="@android:color/transparent"
+            android:src="@drawable/pre"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="15dp"
+            android:id="@+id/playButton"
+            android:contentDescription="@string/play_pause_button_description"
+            android:onClick="playPauseSong"
+            android:background="@android:color/transparent"
+            android:src="@drawable/pau"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:contentDescription="@string/next_song_button_description"
+            android:onClick="nextSongPlay"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ne"/>
+
+        </LinearLayout>
+
+</LinearLayout>
